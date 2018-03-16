@@ -15,7 +15,7 @@ function view (state, emit) {
 					<h2 class="tc">BUSINESS MODEL CANVAS</h2>
 				</div>
 				<div class="fl w-100 w-third-ns w-50-m pa2">
-					<div class="bg-white pv4 link dim ba b--black-20 br2 pointer" onclick=${handleClick}>
+					<div class="${((state.canvas.value_prop_values.length > 0) ? 'bg-washed-green' : 'bg-white')} pv4 link dim ba b--black-20 br2 pointer" onclick=${handleClick}>
 						<h4 class="tc">VALUE PROPOSITION</h4>
 					</div>
 				</div>
@@ -65,6 +65,10 @@ function view (state, emit) {
   `
 
   function handleClick (event) {
-    alert("You clicked: " + event.target.children[0].innerHTML + "! What should the app do next?");
+	
+	const newTitle = event.target.children[0].innerHTML;
+	emit('canvas:update:detailsPage', newTitle)
+
+    emit('pushState', '/detail');
   }
 }
