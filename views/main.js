@@ -15,7 +15,7 @@ function view (state, emit) {
 					<h2 class="tc">BUSINESS MODEL CANVAS</h2>
 				</div>
 				<div class="fl w-100 w-third-ns w-50-m pa2">
-					<div class="${((state.canvas.value_prop_values.length > 0) ? 'bg-washed-green' : 'bg-white')} pv4 link dim ba b--black-20 br2 pointer" onclick=${handleClick}>
+					<div class="${((state.canvas.value_prop_values.length > 0) ? 'bg-washed-green green' : 'bg-white')} pv4 link dim ba b--black-20 br2 pointer" onclick=${handleClick}>
 						<h4 class="tc">VALUE PROPOSITION</h4>
 					</div>
 				</div>
@@ -61,7 +61,16 @@ function view (state, emit) {
 				</div>
 		  </div>
 		</div>
+		<footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+		  <small class="f6 db tc">© 2016 <b class="ttu">COLLECTIVE CAMPUS Inc</b>., All Rights Reserved</small>
+		  <div class="tc mt3">
+			<a href="/language/" title="Language" class="f6 dib ph2 link mid-gray dim">Language</a>
+			<a href="/terms/"    title="Terms" class="f6 dib ph2 link mid-gray dim">Terms of Use</a>
+			<a href="/privacy/"  title="Privacy" class="f6 dib ph2 link mid-gray dim">Privacy</a>
+		  </div>
+		</footer>
     </body>
+	
   `
 
   function handleClick (event) {
